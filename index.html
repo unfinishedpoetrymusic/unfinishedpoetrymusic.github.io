@@ -116,6 +116,29 @@
     }
     .links a:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
 
+    /* ---------- Album ---------- */
+    .album img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      background: #151517;
+    }
+    .album .meta { margin-top: 18px; }
+    .album .title {
+      font-weight: 900;
+      font-size: 1.9rem;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+    }
+    .album .year {
+      margin-top: 8px;
+      font-weight: 200;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
     /* ---------- Bio ---------- */
     .bio p {
       font-size: 1.04rem;
@@ -162,6 +185,16 @@
     <header>
       <h1>Unfinished<br>Poetry</h1>
     </header>
+
+    <!-- ============ ALBUM ============ -->
+    <section class="album" aria-labelledby="album">
+      <h2 id="album">Album</h2>
+      <img src="images/goodbye-for-now.jpg" alt="Goodbye for Now album cover" width="1200" height="1200">
+      <div class="meta">
+        <p class="title">Goodbye for Now</p>
+        <p class="year">2023</p>
+      </div>
+    </section>
 
     <!-- ============ LISTEN — edit links here ============ -->
     <section aria-labelledby="listen">

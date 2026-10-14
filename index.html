@@ -17,16 +17,20 @@
   <style>
     /* ============================================================
        EASY SETTINGS
-       - Background image: put an image named "background.jpg" in
-         this folder, then change  --bg-image: none;  to
-         --bg-image: url("background.jpg");
+       - Background images: replace images/background.jpg (wide,
+         2560x1440) and images/background-mobile.jpg (tall, 1080x1920)
+         with new files of the same names.
+       - --overlay: how dark the layer over the background is
+         (0 = no darkening, 1 = fully black).
        - Colors: change the values below.
        ============================================================ */
     :root {
-      --bg-image: none;
+      --bg-image: url("images/background.jpg");
+      --bg-image-mobile: url("images/background-mobile.jpg");
+      --overlay: .78;
       --bg: #0b0b0c;
       --text: #e9e6e1;
-      --muted: #8a8780;
+      --muted: #a39f97;
       --line: #26262a;
       --hover: #ffffff;
     }
@@ -37,18 +41,31 @@
 
     body {
       background-color: var(--bg);
-      background-image:
-        linear-gradient(180deg, rgba(11,11,12,.55) 0%, rgba(11,11,12,.85) 45%, var(--bg) 100%),
-        var(--bg-image);
-      background-size: cover;
-      background-position: center top;
-      background-attachment: fixed;
       color: var(--text);
       font-family: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
       font-weight: 300;
       line-height: 1.6;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
+    }
+
+    /* Fixed background layers (works on phones too) */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    body::before {
+      background: var(--bg) var(--bg-image) center / cover no-repeat;
+      z-index: -2;
+    }
+    body::after {
+      background: rgba(11,11,12,var(--overlay));
+    }
+    @media (max-aspect-ratio: 1/1) {
+      body::before { background-image: var(--bg-image-mobile); }
     }
 
     .wrap {

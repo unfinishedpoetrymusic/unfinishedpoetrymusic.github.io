@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unfinished Poetry</title>
+  <meta name="description" content="Unfinished Poetry — alternative music rooted in rock, shaped by melancholy. New album Ragdoll, December 2026.">
+  <meta property="og:title" content="Unfinished Poetry">
+  <meta property="og:description" content="Alternative music rooted in rock, shaped by melancholy. New album Ragdoll, December 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unfinishedpoetrymusic.github.io/">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b0b0c'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-weight='900' font-size='38' fill='%23e9e6e1' text-anchor='middle'%3EUP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       EASY SETTINGS
+       - Background image: put an image named "background.jpg" in
+         this folder, then change  --bg-image: none;  to
+         --bg-image: url("background.jpg");
+       - Colors: change the values below.
+       ============================================================ */
+    :root {
+      --bg-image: none;
+      --bg: #0b0b0c;
+      --text: #e9e6e1;
+      --muted: #8a8780;
+      --line: #26262a;
+      --hover: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(180deg, rgba(11,11,12,.55) 0%, rgba(11,11,12,.85) 45%, var(--bg) 100%),
+        var(--bg-image);
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 88px 24px 56px;
+    }
+
+    /* ---------- Header ---------- */
+    h1 {
+      font-weight: 900;
+      font-size: clamp(2.6rem, 11vw, 4.2rem);
+      line-height: .9;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+    .tagline {
+      margin-top: 18px;
+      font-weight: 200;
+      font-size: 1.05rem;
+      color: var(--muted);
+      letter-spacing: .01em;
+    }
+
+    /* ---------- Sections ---------- */
+    section { margin-top: 64px; }
+    h2 {
+      font-weight: 800;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    /* ---------- Upcoming album ---------- */
+    .release {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 26px 0;
+    }
+    .release .title {
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+    }
+    .release .date {
+      margin-top: 10px;
+      font-weight: 200;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    /* ---------- Links ---------- */
+    .links { list-style: none; border-top: 1px solid var(--line); }
+    .links a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 17px 2px;
+      border-bottom: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.12rem;
+      letter-spacing: -0.01em;
+      transition: color .2s ease, padding .2s ease;
+    }
+    .links a::after {
+      content: "\2197";
+      font-weight: 300;
+      color: var(--muted);
+      transition: color .2s ease, transform .2s ease;
+    }
+    .links a:hover, .links a:focus-visible {
+      color: var(--hover);
+      padding-left: 10px;
+    }
+    .links a:hover::after, .links a:focus-visible::after {
+      color: var(--hover);
+      transform: translate(2px, -2px);
+    }
+    .links a:focus-visible { outline: 1px solid var(--muted); outline-offset: 2px; }
+
+    /* ---------- Bio ---------- */
+    .bio p {
+      font-size: 1.04rem;
+      font-weight: 300;
+      color: #cfccc6;
+    }
+    .bio p + p { margin-top: 1em; }
+    .bio em { font-style: normal; font-weight: 600; color: var(--text); }
+
+    /* ---------- Contact ---------- */
+    .contact a {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--muted);
+      padding-bottom: 2px;
+      word-break: break-all;
+      transition: border-color .2s ease, color .2s ease;
+    }
+    .contact a:hover { color: var(--hover); border-color: var(--hover); }
+
+    footer {
+      margin-top: 80px;
+      font-size: .78rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 420px) {
+      .wrap { padding: 64px 20px 48px; }
+      section { margin-top: 52px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <header>
+      <h1>Unfinished<br>Poetry</h1>
+      <p class="tagline">Alternative music, rooted in rock, shaped by melancholy.</p>
+    </header>
+
+    <!-- ============ UPCOMING ALBUM ============ -->
+    <section aria-labelledby="new">
+      <h2 id="new">New album</h2>
+      <div class="release">
+        <p class="title">Ragdoll</p>
+        <p class="date">Out December 2026</p>
+      </div>
+    </section>
+
+    <!-- ============ LISTEN — edit links here ============ -->
+    <section aria-labelledby="listen">
+      <h2 id="listen">Listen</h2>
+      <ul class="links">
+        <li><a href="https://open.spotify.com/artist/1dGJN1LxzNdBgy9xRBCQ7J" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://music.apple.com/artist/unfinished-poetry/1677875754" target="_blank" rel="noopener">Apple Music</a></li>
+        <li><a href="https://www.youtube.com/@unfinishedpoetry" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://unfinishedpoetry.bandcamp.com/album/goodbye-for-now" target="_blank" rel="noopener">Bandcamp</a></li>
+        <li><a href="https://www.deezer.com/artist/206117317" target="_blank" rel="noopener">Deezer</a></li>
+        <li><a href="https://tidal.com/artist/38052691" target="_blank" rel="noopener">Tidal</a></li>
+        <li><a href="https://music.amazon.com/artists/B0BYTJ1JKP/unfinished-poetry" target="_blank" rel="noopener">Amazon Music</a></li>
+        <li><a href="https://soundcloud.com/unfinished-poetry" target="_blank" rel="noopener">SoundCloud</a></li>
+        <li><a href="https://www.instagram.com/unfinished_poetry_production/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
+
+    <!-- ============ BIO ============ -->
+    <section class="bio" aria-labelledby="about">
+      <h2 id="about">About</h2>
+      <p>Unfinished Poetry makes alternative music rooted in rock, shaped by melancholy, and drawn to the tension between the familiar and what unsettles. Guitars and synthesizers keep their recognizable voices, then sometimes drift into hazier, less familiar forms.</p>
+      <p>Melancholy, anxiety, and panic run through <em>Ragdoll</em>, his newest album and most personal release yet. Building on the intimacy of 2023’s <em>Goodbye for Now</em>, it opens a more vulnerable view of years shaped by anxiety and panic disorder, and the uncertainty of whether those feelings will ever loosen their hold. In its more exposed moments, somber feelings open onto a fragile sense of peace.</p>
+      <p>Across <em>Ragdoll</em>, he searches for a fragile kind of beauty and the quiet relief of letting go.</p>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <a href="mailto:unfinishedpoetry.contact@gmail.com">unfinishedpoetry.contact@gmail.com</a>
+    </section>
+
+    <footer>© <span id="y">2026</span> Unfinished Poetry</footer>
+  </main>
+  <script>try{document.getElementById("y").textContent=new Date().getFullYear()}catch(e){}</script>
+</body>
+</html>

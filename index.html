@@ -29,7 +29,7 @@
     :root {
       --bg-image: url("images/background.jpg");
       --bg-image-mobile: url("images/background-mobile.jpg");
-      --overlay: .35;
+      --overlay: .1;
       --column: #1b1b1d;
       --bg: #0b0b0c;
       --text: #e9e6e1;
@@ -221,9 +221,6 @@
     @media (max-width: 420px) {
       .logo-top { width: 36px; height: 36px; margin: -24px auto 44px; }
     }
-    /* Background image OFF — delete the next 2 lines to bring it back */
-    body::before, body::after { display: none !important; }
-    body { background: #0b0b0c; }
   </style>
 </head>
 <body>

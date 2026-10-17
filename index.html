@@ -56,7 +56,10 @@
     body::before, body::after {
       content: "";
       position: fixed;
-      inset: 0;
+      top: 0; left: 0; right: 0;
+      /* Fixed height so the image doesn't resize when the phone's address bar shows/hides */
+      height: 100vh;
+      height: 100lvh;
       z-index: -1;
       pointer-events: none;
     }

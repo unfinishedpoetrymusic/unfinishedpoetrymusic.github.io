@@ -227,6 +227,12 @@
     @media (max-width: 420px) {
       .logo-top { width: 36px; height: 36px; margin: -24px auto 44px; }
     }
+    /* ---------- Releases (two-up) ---------- */
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .rel img { display:block; width:100%; height:auto; aspect-ratio:1/1; background:#151517; }
+    .rel .t { margin-top: 12px; font-weight: 800; font-size: 1.02rem; line-height: 1.15; letter-spacing: -0.015em; text-transform: uppercase; }
+    .rel .d { margin-top: 5px; font-weight: 300; font-size: .86rem; color: var(--muted); }
+    @media (max-width: 420px) { .grid2 { gap: 14px; } .rel .t { font-size: .92rem; } .rel .d { font-size: .8rem; } }
   </style>
 </head>
 <body>
@@ -238,13 +244,30 @@
       <h1>Unfinished<br>Poetry</h1>
     </header>
 
-    <!-- ============ ALBUM ============ -->
-    <section class="album" aria-labelledby="album">
-      <h2 id="album">Album</h2>
-      <img src="images/goodbye-for-now.jpg" alt="Goodbye for Now album cover" width="1200" height="1200">
+    <!-- ============ NEW ALBUM ============ -->
+    <section class="album" aria-labelledby="new-album">
+      <h2 id="new-album">New album</h2>
+      <img src="images/ragdoll.jpg" alt="Ragdoll album cover" width="1200" height="1200">
       <div class="meta">
-        <p class="title">Goodbye for Now</p>
-        <p class="year">2023</p>
+        <p class="title">Ragdoll</p>
+        <p class="year">Album · December 2, 2026</p>
+      </div>
+    </section>
+
+    <!-- ============ MORE RELEASES ============ -->
+    <section class="releases" aria-labelledby="releases">
+      <h2 id="releases">Releases</h2>
+      <div class="grid2">
+        <div class="rel">
+          <img src="images/you-show-me-around.jpg" alt="You Show Me Around single cover" width="1200" height="1200">
+          <p class="t">You Show Me Around</p>
+          <p class="d">Single · November 19, 2026</p>
+        </div>
+        <div class="rel">
+          <img src="images/goodbye-for-now.jpg" alt="Goodbye for Now album cover" width="1200" height="1200">
+          <p class="t">Goodbye for Now</p>
+          <p class="d">Album · 2023</p>
+        </div>
       </div>
     </section>
 
